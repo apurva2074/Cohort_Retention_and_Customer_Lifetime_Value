@@ -1,0 +1,5 @@
+Rule,Rows Before,Rows After,Rows Removed,Explanation
+Remove missing Customer IDs,1067371,824364,243007,Customers without an identifiable Customer ID cannot be included in customer-level cohort analysis.
+Remove cancellation invoices,824364,805620,18744,Invoices beginning with C are treated as cancellations and excluded from sales revenue.
+Remove non-positive Quantity and Price,805620,805549,71,Removed rows with non-positive quantity or price. Initial invalid quantity rows: 0; invalid price rows: 71. Some rows may overlap.
+Remove confirmed non-product stock codes,805549,802997,2552,"Excluded exact StockCode matches: ['POST', 'M', 'D']."
